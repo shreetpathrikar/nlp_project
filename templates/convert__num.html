@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>code</h1>
+    
+    <p># import the library<br> 
+        <br>import inflect <br>
+        q = inflect.engine()<br> 
+          
+        # convert number into text<br> 
+        <br>
+        def convert_num(text): <br>
+        <br>
+        &nbsp;    # split strings into list of texts<br>
+        <br> 
+        &nbsp;    temp_string = text.split() <br>
+        <br>
+        &nbsp;    # initialise empty list <br>
+        <br>
+        &nbsp;   new_str = [] <br>
+          
+        &nbsp;    for word in temp_string: <br>
+        <br>
+        &nbsp;&nbsp;        # if text is a digit, convert the digit<br> 
+        &nbsp;&nbsp;        # to numbers and append into the new_str list<br>
+        <br> 
+        &nbsp;&nbsp;        if word.isdigit(): <br>
+        &nbsp;&nbsp;&nbsp;            temp = q.number_to_words(word)<br> 
+        &nbsp;&nbsp;&nbsp;            new_str.append(temp) <br>
+        <br>
+        &nbsp;&nbsp;&nbsp;        # append the texts as it is <br>
+        <br>
+        &nbsp;&nbsp;        else: <br>
+        &nbsp;&nbsp;&nbsp;            new_str.append(word) <br>
+        <br>
+        &nbsp;    # join the texts of new_str to form a string<br> 
+        <br>
+        &nbsp;    temp_str = ' '.join(new_str) <br>
+        &nbsp;    return temp_str <br>
+          
+        input_str = 'You bought 6 candies from shop, and 4 candies are in home.'<br>
+        convert_num(input_str)</p><br>
+    <h4>output:</h4><p>'You bought six candies from shop, and four candies are in home.'</p>
+
+
+
+
+
+</body>
+</html>

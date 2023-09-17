@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>code</h1>
+    <p>
+        from nltk.tokenize import word_tokenize <br>
+        from nltk import pos_tag <br>
+        nltk.download('averaged_perceptron_tagger')<br><br>
+          
+    
+        def pos_tagg(text): <br>
+        &nbsp;&nbsp;    word_tokens = word_tokenize(text) <br>
+        &nbsp;&nbsp;    return pos_tag(word_tokens) <br>
+          
+        pos_tagg('Are you afraid of something?') </p><br><br>
+
+
+        <h4>output:</h4><p>[('Are', 'NNP'), ('you', 'PRP'), ('afraid', 'IN'), ('of', 'IN'), ('something', 'NN'), ('?', '.')]</p>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <link rel="stylesheet"  href="/static/style.css">
+    
+    <nav class="nvba">
+        <div class="nvb">
+                <li><a href="#">NLTK</a></li>
+                <li><a href="/textblob/">TEXTBLOB</a></li>
+                <li><a href="/spacy/">SPACY</a></li>
+        </div>
+    </nav>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>welcome preprocessing channel</h1>
+    
+    <form action="/process" method="post">
+
+        <div><h1>text preprocessing</h1><p>Supose we have textual data available, we need to apply many of pre-processing steps to the data to transform those words into numerical features that work with machine learning algorithms.
+
+            The pre-processing steps for the problem depend mainly on the domain and the problem itself.We don't need to apply all the steps for every problem.
+            
+            Here, we're going to see text preprocessing in Python. We'll use NLTK(Natural language toolkit) library here.</p></div>
+        
+        <div><h1>NLTK(Natural Language toolkit)</h1><h4>Import Necessary Libraries </h4><p>import nltk<br>
+            import string<br>
+            import re</p></div>
+
+        <div> <h2>1. Remove numbers</h2><p>We should either remove the numbers or convert those numbers into textual representations.
+            We use regular expressions(re) to remove the numbers.</p>
+            <label for="user1_input">Enter a sentence:</label><input type="text" name="user1_input">
+        <input type="submit" value="Get Output">   <a href="{{ url_for('user1_html') }}" id="viewCodeButton">View Code</a></div>
+
+        <div> <h2>2. Convert Numbers into Words</h2><p>As we mentioned above,you can also convert the numbers into words. This could be done by using the inflect library.</p>
+            <p>import inflect.<br>
+                q = inflect.engine() </p>
+                <label for="user2_input">Enter a sentence:</label><input type="text" name="user2_input">
+            <input type="submit" value="Get Output"><a href="{{ url_for('user2_html') }}" id="viewCodeButton">View Code</a> </div>
+
+        <div> <h2>3. Remove Punctuation</h2><p>We remove punctuations because of that we don't have different form of the same word. If we don't remove punctuations, then been, been, and been! will be treated separately.</p>
+            <label for="user3_input">Enter a sentence:</label><input type="text" name="user3_input">
+        <input type="submit" value="Get Output">  <a href="{{ url_for('user3_html') }}" id="viewCodeButton">View Code</a></div>
+
+
+        <div> <h2>4. Remove Stop Words</h2><p>Stopwords are words that do not contribute to the meaning of the sentence. Hence, they can be safely removed without causing any change in the meaning of a sentence. The NLTK(Natural Language Toolkit) library has the set of stopwords and we can use these to remove stopwords from our text and return a list of word tokens.</p>
+            
+            <label for="user4_input">Enter a sentence:</label><input type="text" name="user4_input">
+        <input type="submit" value="Get Output"> <a href="{{ url_for('user4_html') }}" id="viewCodeButton">View Code</a></div>
+
+        <div> <h2>5. Word Tokenization</h2><p>Tokenizers divide strings into lists of substrings. For example, tokenizers can be used to find the words and punctuation in a string:</p>
+            
+            <label for="user5_input">Enter a sentence:</label><input type="text" name="user5_input">
+        <input type="submit" value="Get Output"> <a href="{{ url_for('user5_html') }}" id="viewCodeButton">View Code</a></div>
+
+        <div> <h2>6. Sentence Tokenization</h2><p>
+            Sentence tokenization is the process of breaking a text into individual sentences. In NLP, it is a necessary step for many tasks, such as sentiment analysis, text classification, and machine translation.</p>
+            <label for="user6_input">Enter a sentence:</label><input type="text" name="user6_input">
+        <input type="submit" value="Get Output"><a href="{{ url_for('user6_html') }}" id="viewCodeButton">View Code</a></div>
+
+        <div> <h2>7. Stemming </h2><p>From Stemming we will process of getting the root form of a word. Root or Stem is the part to which inflextional affixes(like -ed, -ize, etc) are added. We would create the stem words by removing the prefix of suffix of a word. So, stemming a word may not result in actual words.</p>
+            <p>For Example:<br> Mangoes ---> Mango <br> Boys ---> Boy <br> going ---> go <br>If our sentences are not in tokens, then we need to convert it into tokens. After we converted strings of text into tokens, then we can convert those word tokens into their root form. These are the Porter stemmer, the snowball stemmer, and the Lancaster Stemmer. We usually use Porter stemmer among them. </p>
+            <label for="user7_input">Enter a sentence:</label><input type="text" name="user7_input">
+        <input type="submit" value="Get Output"> <a href="{{ url_for('user7_html') }}" id="viewCodeButton">View Code</a></div>
+
+        <div> <h2>8. Lemmatization</h2><p>As stemming, lemmatization do the same but the only difference is that lemmatization ensures that root word belongs to the language. Because of the use of lemmatization we will get the valid words. In NLTK(Natural language Toolkit), we use WordLemmatizer to get the lemmas of words. We also need to provide a context for the lemmatization.So, we added pos(parts-of-speech) as a parameter.<br></p>
+            <label for="user8_input">Enter a sentence:</label><input type="text" name="user8_input">
+        <input type="submit" value="Get Output"> <a href="{{ url_for('user8_html') }}" id="viewCodeButton">View Code</a></div>
+
+        <div> <h2>9. Parts of Speech (POS) Tagging</h2><p>The pos(parts of speech) explain you how a word is used in a sentence. In the sentence, a word have different contexts and semantic meanings. The basic natural language processing(NLP) models like bag-of-words(bow) fails to identify these relation between the words. For that we use pos tagging to mark a word to its pos tag based on its context in the data. Pos is also used to extract rlationship between the words. </p>
+            <label for="user9_input">Enter a sentence:</label><input type="text" name="user9_input">
+        <input type="submit" value="Get Output"> <a href="{{ url_for('user9_html') }}" id="viewCodeButton">View Code</a></div>    
+         
+
+        <div> <h2>10. Named Entity Recognition</h2><p>It is used to extract information from unstructured text. It is used to classy the entities which is present in the text into categories like a person, organization, event, places, etc. This will give you a detail knowledge about the text and the relationship between the different entities. </p>
+            <label for="user10_input">Enter a sentence:</label><input type="text" name="user10_input">
+        <input type="submit" value="Get Output"> <a href="{{ url_for('user10_html') }}" id="viewCodeButton">View Code</a></div>
+
+        <div> <h2>11. Word Count</h2><p>I am assuming you have the understanding of tokenization,the first figure we can calculate is the word frequency.By *word frequency* we can find out how many times each tokens appear in the text. When talking about word frequency, we distinguished between *types* and *tokens*.Types are the distinct words in a corpus, whereas tokens are the words, including repeats. Let's see how this works in practice.
+            <br>Let's take an example for better understanding:
+            <br>“There is no need to panic. We need to work together, take small yet important measures to ensure self-protection,” the Prime Minister tweeted.
+            <br>How many tokens and types are there in above sentences?
+            <br>Let's use Python for calculating these figures. First, tokenize the sentence by using the tokenizer which uses the non-alphabetic characters as a separator. </p>
+            <label for="user11_input">Enter a sentence:</label><input type="text" name="user11_input">
+        <input type="submit" value="Get Output"> <a href="{{ url_for('user11_html') }}" id="viewCodeButton">View Code</a></div> <br><br>
+        
+        <div> <h2>12. frequency distribution</h2><p> 
+            In Natural Language Processing (NLP), a frequency distribution is a way of representing the number of times each word or phrase appears in a corpus of text. It is a list of the words or phrases in the corpus, along with the number of times each one appears.
+            
+            The FreqDist class in the NLTK library is used to create and manipulate frequency distributions. It takes a list of words or phrases as input and creates a dictionary where the keys are the words or phrases and the values are the number of times they appear.</p>
+            <label for="user12_input">Enter a sentence:</label><input type="text" name="user12_input">
+            <input type="submit" value="Get Output"> <a href="{{ url_for('user12_html') }}" id="viewCodeButton">View Code</a></div> <br><br>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>code</h1>
+    <p> from nltk.stem import wordnet<br> 
+        from nltk.tokenize import word_tokenize<br> 
+        lemma = wordnet.WordNetLemmatizer()<br>
+        nltk.download('wordnet')<br><br>
+        
+        def lemmatize_word(text): <br>
+        &nbsp;&nbsp;    word_tokens = word_tokenize(text)<br> 
+            
+        &nbsp;&nbsp;    lemmas = [lemma.lemmatize(word, pos ='v') for word in word_tokens]<br> 
+        &nbsp;&nbsp;    return lemmas <br><br>
+          
+        text = 'Data is the new revolution in the World, in a day one individual would generate terabytes of data.'<br>
+        lemmatize_word(text)</p><br><br>
+
+        <h4>output:</h4><p>['Data', 'be', 'the', 'new', 'revolution', 'in', 'the', 'World', ',', 'in', 'a', 'day', 'one', 'individual', 'would', 'generate', 'terabytes', 'of', 'data']</p>
+
+
+    
+</body>
+</html>

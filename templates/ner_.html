@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>code</h1>
+    <p>
+        from nltk.tokenize import word_tokenize <br>
+        from nltk import pos_tag, ne_chunk <br>
+        nltk.download('maxent_ne_chunker')<br>
+        nltk.download('words')<br><br>
+          
+        def ner(text): <br>
+        &nbsp;&nbsp;    word_tokens = word_tokenize(text)<br> 
+        &nbsp;&nbsp;    word_pos = pos_tag(word_tokens) <br>
+        &nbsp;&nbsp;    print(ne_chunk(word_pos)) <br><br>
+          
+        text = 'Brain Lara scored the highest 400 runs in a test match which played in between WI and England'<br>
+        ner(text) </p><br>
+
+        <h4>output:</h4><p>(S (PERSON Brain/NNP) (PERSON Lara/NNP) scored/VBD the/DT highest/JJS 400/CD runs/NNS in/IN a/DT test/NN match/NN which/WDT played/VBD in/IN between/IN (ORGANIZATION WI/NNP) and/CC (GPE England/NNP))</p>
+
+
+    
+</body>
+</html>

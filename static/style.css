@@ -1,0 +1,10 @@
+.nvba{
+    border: 1px solid black; background-color: antiquewhite;
+}
+.nvb{
+    display: inline-block; margin-left: 20px;
+}
+
+.nvb li{
+    display: inline-block ; margin:0px 10px; margin-left: 150px; padding: 20px;
+}

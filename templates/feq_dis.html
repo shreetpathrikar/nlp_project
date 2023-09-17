@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>code</h1>
+
+    <p> from nltk import FreqDist<br>
+    def calculate_frequency(sentence):<br>
+    &nbsp;&nbsp;words = word_tokenize(sentence)<br>
+    &nbsp;&nbsp;fdist = FreqDist(words)<br>
+    &nbsp;&nbsp;word_count_list = [f"{word}: {count}" for word, count in fdist.items()]<br><br>
+    sentence = "like aircraft have so many types like  microlight ,like transport , like fighter gnerally in daily need we use transporter"<br>
+    
+    print(word_count_list)<br>
+    </p>
+
+    <h4>output:</h4><p>'['like: 4', 'aircraft: 1', 'have: 1', 'so: 1', 'many: 1', 'types: 1', 'microlight: 1', ',: 2', 'transport: 1', 'fighter: 1', 'gnerally: 1', 'in: 1', 'daily: 1', 'need: 1', 'we: 1', 'use: 1', 'transporter: 1']'</p>
+
+
+    
+</body>
+</html>

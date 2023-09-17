@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>code</h1>
+    <p> from nltk.stem.porter import PorterStemmer<br> 
+        from nltk.tokenize import word_tokenize <br>
+        stem1 = PorterStemmer() <br><br>
+
+        def s_words(text): <br>
+        &nbsp;&nbsp;    word_tokens = word_tokenize(text) <br>
+        &nbsp;&nbsp;    stems = [stem1.stem(word) for word in word_tokens] <br>
+        &nbsp;&nbsp;    return stems <br>
+          
+        text = 'Data is the new revolution in the World, in a day one individual would generate terabytes of data.'<br>
+        s_words(text)</p><br><br>
+
+
+        <h4>output:</h4><p>['data', 'is', 'the', 'new', 'revolut', 'in', 'the', 'world', ',', 'in', 'a', 'day', 'one', 'individu', 'would', 'gener', 'terabyt', 'of', 'data', '.']</p>
+
+
+
+
+    
+</body>
+</html>
